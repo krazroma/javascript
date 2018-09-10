@@ -6,13 +6,24 @@
   </head>
   <body>
     <form action="" method="get">
-      <select name="">
+      <select id="background" onchange="updateBackground(this)">>
         <option value="blue">Blue</option>
         <option value="purple">Purple</option>
         <option value="orange">Orange</option>
         <option value="red">Red</option>
+        <option value="black">Black</option>
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        <option value="yellow">Yellow</option>
       </select>
-
     </form>
   </body>
+<script>
+  function updateBackground(selectElem)
+  {
+    let i = selectElem.selectedIndex; // Get the selected option's index.
+    document.body.style.backgroundColor = selectElem.options[i].value;
+  }
+
+</script>
 </html>
