@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<!-- important stuff starts here-->
+  <body onload="hideMains()">
+    <form class="" action="" method="post">
+      <label class="country"> Country: </label>
+      <select><!--creates two options through onclick-->
+        <option disabled selected label=""> Select One </option>
+        <option values="US" onchange="showUS()">United States</option>
+        <option values="Ukraine" onchange="showUkraine()">Ukraine</option>
+      </select>
+<!--Ukraine Branch-->
+        <div id="main_ukraine"><br />
+              <label>Province: </label><select>
+                  <option disabled selected label=""> Select One </option>
+                  <option values="Lviv" onclick="showLviv()">Lviv</option>
+                  </select>
+          <div id="main_ukraine_sub"><br />
+              <label>City: </label><select id="ukr_city" class="" name="">
+                <option disabled selected label=""> Select One </option>
+                <option values="Lviv" >Lviv</option>
+              </select>
+          </div>
+        </div>
+<!--US Branch-->
+          <div id="main_us"><br />
+            <label>State: </label><input id ="entry" type="text" onkeyup="checkPA()" placeholder="Ex: A.Z.">
+          <div id="main_us_sub"><br />
+            <label>City: </label>
+              <select id="us_city">
+                <option disabled selected label=""> Select One </option>
+                <option values="State College">State College</option>
+                <option values="Lewistown">Lewistown</option>
+            </select>
+            </div>
+          </div>
+    </form>
+  </body>
+<!--Beginning of scripts-->
+  <script>
+function showLviv()
+{
+  document.getElementById('main_ukraine_sub').style.display="block";
+}
+function checkPA()
+{
+  var isPA = document.getElementById('entry').value;
+  if ( isPA.toUpperCase() =="PA"){
+    document.getElementById('main_us_sub').style.display="block";}
+  else{
+    document.getElementById('main_us_sub').style.display="none";
+  }
+}
+function hideMains()
+{
+  document.getElementById('main_ukraine').style.display="none";
+  document.getElementById('main_ukraine_sub').style.display="none";
+  document.getElementById('main_us').style.display="none";
+  document.getElementById('main_us_sub').style.display="none";
+}
+
+function showUS(){
+document.getElementById("main_ukraine").style.display="none";
+  document.getElementById("main_us").style.display="block";
+}
+
+function showUkraine(){
+document.getElementById("main_us").style.display="none";
+  document.getElementById("main_ukraine").style.display="block";
+}
+  </script>
+
+</html>

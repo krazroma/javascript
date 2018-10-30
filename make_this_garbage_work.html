@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<!--hiding inputs-->
+    <body onload="hideInputs()">
+      <form action="" method="post">
+
+<!-- COUNTRY SELECT -->
+      <div id="country">
+        <label>Select country: </label>
+          <select id="country_select" onchange="unHideCountries()">
+            <option disabled selected label style="color:green">Select something</option>
+            <option value="usa" style="color:red">USA</option>
+            <option value="ukraine" style="color:blue">UKRAINE</option>
+          </select>
+      </div>
+
+  <br/>
+
+<!-- USA state select -->
+      <div id="state_div">
+        <label id="state_label"> Select state:</label>
+        <input id="state_text" onchange="unHideInputs2()" type="text" placeholder = "What states do you know?">
+      <br/>
+    </div>
+
+  <br/>
+
+<!-- USA city select -->
+        <div id="city_div">
+          <label>Select city: </label>
+            <select id="city_select">
+              <option disabled selected label=""> Do something </option>
+              <option value="State_colege">State Colege</option>
+              <option value="Lewistown">Lewistown</option>
+            </select>
+        </div>
+
+<!-- Ukraine province select -->
+        <div id="province">
+          <label>Province </label>
+          <select onchange="showLviv()" name="Province">
+            <option disabled selected label="">Select One: </option>
+            <option values="LVIV">LVIV</option>
+          </select>
+        </div>
+
+  <br/>
+
+<!-- Ukraine city select -->
+        <div id="ukr_city">
+          <label>City: </label>
+          <select>
+            <option disabled selected label="">Select One: </option>
+            <option values="Lviv">Lviv</option>
+            <option value="AntiqueWhite">Rava-Ruska</option>
+            <option value="Beige">Bibrka</option>
+            <option value="Cornsilk">Rava-Peremyshliany</option>
+            <option value="GreenYellow">Chervonohrad</option>
+          </select>
+        </div>
+
+    </form>
+  </body>
+
+<!-- script world -->
+  <script>
+
+//hide my sad divs
+    function hideInputs()
+    {
+      document.getElementById("state_div").style.display = "none"
+      document.getElementById("city_div").style.display = "none";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("ukr_city").style.display = "none";
+    }
+
+
+// unhide USA or Ukraine Stuff
+    function unHideCountries()
+    {
+      let bucket = document.getElementById("country_select").value;
+
+      if(bucket == "usa")
+      {
+        document.getElementById("state_div").style.display = "inline";
+        document.getElementById("state_label").style.display = "inline";
+        document.getElementById("province").style.display = "none";
+        document.getElementById("ukr_city").style.display = "none";
+      }
+      else if(bucket == "ukraine")
+      {
+        document.getElementById("province").style.display = "block";
+        document.getElementById("state_div").style.display = "none";
+        document.getElementById("city_div").style.display = "none";
+      }
+    }
+
+
+// Unhide US cities
+    function unHideInputs2()
+    {
+      let x = document.getElementById("state_text").value;
+
+      if (x.toUpperCase() == "PA")
+      {
+        document.getElementById("city_div").style.display = "block";
+      }
+    }
+
+// Show city Lviv
+    function showLviv()
+    {
+      document.getElementById("ukr_city").style.display="block";
+    }
+
+    </script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="addElements.css">
+  </head>
+  <body>
+    <ul id="list">
+      <li id="element1"> Lev </li>
+      <li id="element2"> Roman </li>
+      <li id="element3"> Spencer </li>
+    </ul>
+
+    <br/>
+    <input id="name" type="text" name="" value="">
+    </br>
+
+    <div class="btn" onclick="addLi()"> Add Element </div>
+  </body>
+
+  <script>
+    function addLi()
+    {
+      // get the users input from textbox
+      let name = document.getElementById("name").value;
+
+      // clear the textbox so the text does not remain
+      document.getElementById("name").value = "";
+
+      // created the variable to represent the whole list
+      let ul = document.getElementById("list");
+      let li = document.createElement("li");
+      let numChildren = ul.children.length + 1;
+
+      // adds id = "element4" 
+      li.setAttribute("id", "element" + numChildren);
+
+      // ads class = "fakeClass" to <li>
+      li.className = "fakeClass";
+      //li.appendChild(document.createTextNode(name));
+      li.innerHTML = name;
+      ul.appendChild(li);
+
+    // var node = document.createElement("Li");
+    // var text = document.getElementById("user_input").value;
+    // var textnode=document.createTextNode(text);
+    // node.appendChild(textnode);
+    // document.getElementById("list_item").appendChild(node);
+
+
+    // function addLi(){
+    //   let name = document.getElementById("name_entry").value;
+    //   let ul=document.getElementById("list");
+    //   let li=document.createElement("li");
+    //   let children = ul.children.length +1;
+    //   li.setAttribute("id","element"+children);
+    //   li.appendChild(document.createTextNode(name));
+    //   ul.appendChild(li);
+
+
+    }
+  </script>
+</html>

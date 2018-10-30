@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <body onload="hideInputs()">
+      <form action="" method="post">
+
+      <p onchange="unHideInputs1()" type="text" name="country" id="country">Select country:
+        <select id="country"> </p>
+        <option value="USA">USA</option>
+        <option value="UKRAINE">UKRAINE</option>
+      </select>
+      <br />
+
+
+      <label id="state">Select state: <input onkeyup="unHideInputs2()" type="text" name="state" class="state"> </label>
+      <br />
+      <label id ="city">Select city:  <input type="text" name="city" class="city"> </label>
+
+
+
+      <div id="province">
+        <label>Province </label>
+        <select name="Province">
+          <option value="LVIV">LVIV</option>
+        </select>
+      </div>
+
+    </form>
+
+
+
+  </body>
+
+
+  <script>
+    function hideInputs()
+    {
+      document.getElementById("province").style.display = "none";
+      document.getElementById("state").style.display = "none";
+      document.getElementById("city").style.display = "none";
+    }
+
+
+
+
+    function unHideInputs1()
+    {
+      document.getElementById("state").style.display = "inline";
+    }
+
+    function unHideInputs2()
+    {
+      let x = document.getElementById("state").value;
+
+      if (x == "pa")
+      {
+        document.getElementsByClassName("city").style.display = "inline";
+        //document.getElementById("city").style.display = "inline";
+      }
+    }
+
+    function unHideInputs3()
+    {
+      document.getElementById("province").style.display = "inline";
+    }
+
+
+
+    </script>
+</html>

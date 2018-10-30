@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <body onload="hideInputs()">
+<form action="" method="get">
+
+        <div id="country">
+          <select name="country" id = "country" onchange="unHideInputs1()">
+            <option value="usa">USA</option>
+            <option value="ukraine">Ukraine</option>
+          </select>
+        </div>
+      <br />//all good
+
+
+
+
+      <div id="state">
+        <label> State:</label>
+        <input type="text" id="state" placeholder="type A" name="" value="">// not finished
+
+
+
+
+
+
+
+
+
+        <div id = "province">
+        <label>Province: </label>
+          <select name="province" id="province" onclick="showCityB()">
+          <option value="select" disabled selected>Show Province</option>
+          <option value="LVIV">LVIV<
+
+
+
+
+
+
+
+
+          <option value="AntiqueWhite">Rava-Ruska</option>
+          <option value="Beige">Bibrka</option>
+          <option value="Cornsilk">Rava-Peremyshliany</option>
+          <option value="GreenYellow">Chervonohrad</option>
+          <option value="Lavender">Lviv </option>
+
+        </select>
+      </div>
+
+      <div id="city" action="" method="get">
+        <label>City: </label>
+          <select id="city" onchange="updateBackground(this)">
+          <option value="IndianRed">Lviv</option>
+        </select>
+      </div>
+</form>
+  </body>
+
+<script>
+
+/*function updateBackground(selectElem)
+{
+  let i = selectElem.selectedIndex; // Get the selected option's index.
+  document.body.style.backgroundColor = selectElem.options[i].value;
+}*/
+
+  function hideInputs()
+  {
+    document.getElementById("province").style.display = "none";
+    document.getElementById("city").style.display = "none";
+    /*document.getElementById("lastnamelabel").style.display = "none";
+
+
+    let country = document.getElementsByClassId("country");
+    for (var i = 0; i < country.length; i++)
+    {
+      city[i].style.display = "none";
+    }
+    document.getElementById("state").style.display = "none";*/
+  }
+
+  /*function showState()
+  {
+    document.getElementById("province").style.display = "block";
+  }*/
+
+  function unHideInputs1()
+  {
+    document.getElementById("province").style.display = "block";
+    //document.getElementById("city").style.display = "block";
+    //document.getElementById("province").style.display = "inline";
+    /*let city = document.getElementsByClassName("city");
+    for (var i = 0; i < city.length; i++)
+    {
+      city[i].style.display = "inline";
+    }*/
+  }
+
+  function unHideInputs2()
+  {
+    let x = document.getElementById("province").value;
+
+console.log(x);
+
+    if (x == "Lviv")
+    {
+      document.getElementById("city").style.display = "block";
+    }
+
+  }
+</script>
+</html>

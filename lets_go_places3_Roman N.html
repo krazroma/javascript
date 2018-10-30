@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<!--hiding inputs-->
+    <body onload="hideInputs()">
+      <form action="" method="post">
+
+<!-- COUNTRY SELECT -->
+      <div id="country">
+        <label>Select country: </label>
+          <select onchange="unHideCountries()">
+            <option disabled selected label>Select something</option>
+            <option value="usa">USA</option>
+            <option value="ukraine">UKRAINE</option>
+          </select>
+      </div>
+      <br />
+
+<!-- USA state select -->
+      <div id="state_div">
+        <label id="state_label"> Select state:</label>
+        <input onchange="unHideInputs2()" type="text" placeholder = "What states do you know?">
+      </div>
+
+<!-- USA city select -->
+        <div id="city_div">
+          <label>Select city: </label>
+            <select>
+              <option disabled selected label=""> Do something </option>
+              <option value="State_colege">State Colege</option>
+              <option value="Lewistown">Lewistown</option>
+            </select>
+        </div>
+        <br />
+<!-- Ukraine province select -->
+        <div id="province">
+          <label>Province </label>
+          <select name="Province">
+            <option disabled selected label="">Select One: </option>
+            <option values="LVIV" onchange="showLviv()">LVIV</option>
+          </select>
+        </div>
+
+<!-- Ukraine city select -->
+        <div id="ukr_city"><br />
+          <label>City: </label>
+          <select>
+            <option disabled selected label="">Select One: </option>
+            <option values="Lviv">Lviv</option>
+          </select>
+        </div>
+
+    </form>
+  </body>
+
+<!-- script world -->
+  <script>
+
+//hide my sad divs
+    function hideInputs()
+    {
+      document.getElementById("state_div").style.display = "none"
+      document.getElementById("city_div").style.display = "none";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("ukr_city").style.display = "none";
+    }
+
+
+// unhide USA or Ukraine Stuff
+    function unHideCountries()
+    {
+      //let bucket;
+      let bucket = document.getElementById("country").value;
+      //console.log(bucket);
+
+      if (bucket = "usa")
+      {
+        document.getElementById("state_div").style.display = "block";
+        document.getElementById("city_div").style.display = "block";
+        document.getElementById("province").style.display = "none";
+        document.getElementById("ukr_city").style.display = "none";
+      }
+      else if (bucket = "ukraine")
+      {
+        document.getElementById("province").style.display = "block";
+        document.getElementById("ukr_city").style.display = "block";
+        document.getElementById("state_div").style.display = "none";
+        document.getElementById("city_div").style.display = "none";
+      }
+
+      //document.getElementById("country").innerHTML = bucket;
+    }
+
+
+// Unhide US cities
+    function unHideInputs2()
+    {
+      let x = document.getElementById("state").value;
+
+      if (x == 'pa' || 'PA')
+      {
+        document.getElementById("usa_select_1").style.display = "inline";
+        document.getElementById("city_label").style.display = "inline";
+        document.getElementById("city").style.display = "inline";
+      }
+      else
+      {
+        document.getElementById("usa_select_1").style.display = "none";
+      }
+    }
+
+
+// Show USA
+    function showUS()
+    {
+      document.getElementById("ukraine_select").style.display="none";
+      document.getElementById("usa_select").style.display="block";
+    }
+
+// Show UKRAINE
+    function showUkraine()
+    {
+      document.getElementById("usa_select").style.display="none";
+      document.getElementById("ukraine_select").style.display="block";
+    }
+
+
+// S
+    function showLviv()
+    {
+      document.getElementById('province').style.display="block";
+    }
+
+    </script>
+</html>
