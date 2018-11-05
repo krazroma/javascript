@@ -4,7 +4,7 @@ app.controller("myCtrl", function ($scope, $http)
   $scope.lastName = "Nekrasov";
 
 
-  $http.get("json_sample.html")
+  $http.get("getUsers.php")
     .then(function (response)
     {
         $scope.myData = response.data.records;
