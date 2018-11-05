@@ -31,7 +31,7 @@
       My name is: {{ (firstName + " " + lastName) | uppercase }}
       <br>
       <ul>
-        <li ng-repeat="x in myData">
+        <li ng-repeat="x in myData | orderBy: 'Name'">
           {{ x.Name }} - {{x.Last_Name}}, {{x.City}}
         </li>
       </ul>
