@@ -49,8 +49,7 @@
           </tr>
         </tbody>
       </table>
-
-        <p>Select a person:</p>
+      <p>Select a person:</p>
 
         <select ng-model="selectedPerson" ng-options="x.Name for x in myData">
         </select>
@@ -61,20 +60,6 @@
         <p>City: {{selectedPerson.City}}</p>
 
     </div>
-
-        <!-- <script>
-        var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope) {
-        $scope.records = {
-          Persons name is: {{ x.Name }}
-        //person : {Name : "Ford", Last_Name : "Mustang", City : "red"},
-        // car02 : {brand : "Fiat", model : "500", color : "white"},
-        // car03 : {brand : "Volvo", model : "XC90", color : "black"}
-    }
-});
-</script> -->
-
-
   </body>
   <script src="myApp.js"></script>
   <script src="myCtrl.js"></script>
