@@ -49,10 +49,10 @@
           </tr>
         </tbody>
       </table>
+
       <p>Select a person:</p>
 
-        <select ng-model="selectedPerson" ng-options="x.Name for x in myData">
-        </select>
+        <select ng-model="selectedPerson" ng-options="x.Name for x in myData"></select>
 
         <p>You selected:</p>
         <p>First Name: {{selectedPerson.Name}}</p>
