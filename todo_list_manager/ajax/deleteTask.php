@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once '../includes/db.php'; // The mysql database connection script
 if(isset($_GET['taskID'])){
 $taskID = $_GET['taskID'];

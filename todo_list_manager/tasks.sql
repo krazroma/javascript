@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS roman;
+CREATE DATABASE IF NOT EXISTS angularcode_task;
 
-USE roman;
+USE angularcode_task;
 --
 -- Table structure for table `tasks`
 --
