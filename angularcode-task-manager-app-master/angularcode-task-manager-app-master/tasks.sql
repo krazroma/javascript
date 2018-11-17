@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS angularcode_task;
- 
-USE angularcode_task;
+CREATE DATABASE IF NOT EXISTS roman;
+
+USE roman;
 --
 -- Table structure for table `tasks`
 --
@@ -22,4 +22,3 @@ INSERT INTO `tasks` (`id`, `task`, `status`, `created_at`) VALUES
 (2, 'Perform unit testing', 2, 1390815993),
 (3, 'Find bugs', 2, 1390817659),
 (4, 'Test in small devices', 2, 1390818389);
-
