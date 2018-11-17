@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/db.php'; // The mysql database connection script
+require_once('../includes/db.php'); // The mysql database connection script require('dbconnection.php');
 if(isset($_GET['task'])){
 $task = $_GET['task'];
 $status = "0";
