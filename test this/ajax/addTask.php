@@ -12,6 +12,6 @@ $result = $mysqli->affected_rows;
 
 echo $json_response = json_encode($result);
 
-print_r("addTask");
+var_dump("addTask");
 }
 ?>
