@@ -7,6 +7,11 @@
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
+CREATE DATABASE IF NOT EXISTS roman2;
+
+USE roman2;
+
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
