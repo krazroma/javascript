@@ -6,7 +6,7 @@ if(isset($_GET['status']))
 	$status = $_GET['status'];
 }
 $query="select ID, TASK, STATUS from tasks where status like '$status' order by status,id desc";
-$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$result = $mysqli->query($query);
 
 $arr = array();
 if($result->num_rows > 0)
