@@ -8,7 +8,7 @@ app.controller('tasksController', function($scope, $http){
         $scope.tasks = data;
        });
   };
-  
+
   $scope.addTask = function (task) {
     $http.post("ajax/addTask.php?task="+task).success(function(data){
         getTask();
@@ -25,7 +25,8 @@ app.controller('tasksController', function($scope, $http){
   };
 
   $scope.toggleStatus = function(item, status, task) {
-    if(status=='2'){status='0';}else{status='2';}
+    if(status=='2'){status='0';}
+    else{status='2';}
       $http.post("ajax/updateTask.php?taskID="+item+"&status="+status).success(function(data){
         getTask();
       });

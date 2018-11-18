@@ -6,7 +6,7 @@ if(isset($_GET['task']))
   $status = "0";
   $created = time();
 
-  $query="INSERT INTO tasks(task,status,created_at)  VALUES ('$task', '$status', '$created')";
+  $query="INSERT INTO tasks(task,status,created_at) VALUES ('$task', '$status', '$created')";
   $result = $mysqli->query($query);
 
   $result = $mysqli->affected_rows;
