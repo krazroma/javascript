@@ -7,9 +7,9 @@
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
-CREATE DATABASE IF NOT EXISTS roman2;
+CREATE DATABASE IF NOT EXISTS roman;
 
-USE roman2;
+USE roman;
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
