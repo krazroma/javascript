@@ -1,5 +1,5 @@
 <section class="items">
-	
+
 	<header class="items-header">
 		<div class="row">
 			<div class="col-sm-9 col-xs-12">
@@ -34,9 +34,9 @@
 			ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)"
 			class="items-list-cb"/>
 			<span class="items-list-mark"></span>
-			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span> 
-			<a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a> 
+			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
+			<a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
 		</label>
-	</fieldset>	
+	</fieldset>
 
 </section>

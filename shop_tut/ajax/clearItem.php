@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once '../includes/db.php';
 
 	$query = "DELETE FROM shop WHERE status = 2";

@@ -2,21 +2,21 @@
 var app = angular.module('shopApp', []);
 
 app.controller('shopController', function($scope, $http) {
-	
-  getItem(); // Load all available items 
-  function getItem(){  
+
+  getItem(); // Load all available items
+  function getItem(){
   $http.post("ajax/getItem.php").success(function(data){
         $scope.items = data;
        });
   };
-  
+
   $scope.addItem = function (item) {
     $http.post("ajax/addItem.php?item="+item).success(function(data){
         getItem();
         $scope.itemInput = "";
       });
   };
-  
+
   $scope.deleteItem = function (item) {
     if(confirm("Are you sure to delete this item?")){
     $http.post("ajax/deleteItem.php?itemID="+item).success(function(data){
@@ -31,7 +31,7 @@ app.controller('shopController', function($scope, $http) {
         getItem();
       });
     }
-  };  
+  };
 
   $scope.changeStatus = function(item, status, task) {
     if(status=='2'){status='0';}else{status='2';}
