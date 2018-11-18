@@ -16,6 +16,4 @@ if($result->num_rows > 0) {
 
 # JSON-encode the response
 echo $json_response = json_encode($arr);
-
-print_r("getTask");
 ?>

@@ -11,5 +11,4 @@ $result = $mysqli->affected_rows;
 $json_response = json_encode($result);
 }
 
-print_r("updateTask");
 ?>
