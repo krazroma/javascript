@@ -1,9 +1,9 @@
-<?php
+<?php 
 require_once '../includes/db.php'; // The mysql database connection script
 if(isset($_GET['itemID'])){
 	$itemID = $mysqli->real_escape_string($_GET['itemID']);
 
-	$query="DELETE FROM tasks WHERE id='$itemID'";
+	$query="DELETE FROM shop WHERE id='$itemID'";
 	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 	$result = $mysqli->affected_rows;
