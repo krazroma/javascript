@@ -26,11 +26,11 @@ CREATE TABLE IF NOT EXISTS `shop` (
 --
 
 INSERT INTO `shop` (`id`, `item`, `status`, `created_at`) VALUES
-(8, 'Vodka', 0, '2018-11-19'),
-(13, 'Bread', 0, '2018-11-19'),
-(15, 'Cheese', 0, '2018-11-19'),
-(16, 'Potatos', 0, '2018-11-19'),
-(17, 'Herring', 0, '2018-11-19');
+(8, 'Buy Vodka', 0, '2018-11-19'),
+(13, 'Buy Bread', 0, '2018-11-19'),
+(15, 'Buy Cheese', 0, '2018-11-19'),
+(16, 'Buy Potatos', 0, '2018-11-19'),
+(17, 'Buy Herring', 0, '2018-11-19');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
