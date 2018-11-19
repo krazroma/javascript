@@ -4,8 +4,8 @@ $status = '%';
 if(isset($_GET['status'])){
 	$status = $mysqli->real_escape_string($_GET['status']);
 }
-$query="SELECT ID, ITEM, STATUS, CREATED_AT from shop where status like '$status' order by status,id desc";
-$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$query="SELECT ID, ITEM, STATUS, CREATED_AT from todo where status like '$status' order by status,id desc";
+$result = $mysqli->query($query);
 
 $arr = array();
 if($result->num_rows > 0) {

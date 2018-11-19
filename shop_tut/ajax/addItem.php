@@ -5,8 +5,8 @@ if(isset($_GET['item'])){
 	$status = "0";
 	$created = date("Y-m-d", strtotime("now"));
 
-	$query="INSERT INTO shop(item,status,created_at)  VALUES ('$item', '$status', '$created')";
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$query="INSERT INTO todo(item,status,created_at)  VALUES ('$item', '$status', '$created')";
+	$result = $mysqli->query($query);
 
 	$result = $mysqli->affected_rows;
 

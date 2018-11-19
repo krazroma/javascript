@@ -4,8 +4,8 @@ if(isset($_GET['itemID'])){
 	$status = $mysqli->real_escape_string($_GET['status']);
 	$itemID = $mysqli->real_escape_string($_GET['itemID']);
 
-	$query="UPDATE shop set status='$status' where id='$itemID'";
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$query="UPDATE todo set status='$status' where id='$itemID'";
+	$result = $mysqli->query($query);
 
 	$result = $mysqli->affected_rows;
 
