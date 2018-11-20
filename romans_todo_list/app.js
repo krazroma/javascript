@@ -18,12 +18,41 @@ app.controller('shopController', function($scope, $http) {
   };
 
 //////////////////////////////////////////////////////////////////////
-  $scope.updateEditedItem = function(item) {
-      $http.post("updateEditedItem.php?itemID="+item).success(function(data){
-        getItem();
-        $scope.itemInput = "";
-      });
-  };
+  // $scope.EditedItem = function(item) {
+  //     $http.post("EditedItem.php?itemID="+item).success(function(data){
+  //       getItem();
+  //       $scope.itemInput = "";
+  //     });
+  // };
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+
+  $scope.getTemplate = function (item) {
+          if (item.id === $scope.model.selected.id) return 'edit';
+          else return 'display';
+      };
+
+      $scope.editContact = function (item) {
+          $scope.model.selected = angular.copy(item);
+      };
+
+      $scope.saveContact = function (idx) {
+          console.log("Saving contact");
+          $scope.model.contacts[idx] = angular.copy($scope.model.selected);
+          $scope.reset();
+      };
+
+      $scope.reset = function () {
+          $scope.model.selected = {};
+      };
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////
 
 
@@ -45,7 +74,7 @@ app.controller('shopController', function($scope, $http) {
 
   $scope.changeStatus = function(item, status, task) {
     if(status=='2'){status='0';}else{status='2';}
-      $http.post("updateItem.php?itemID="+item+"&status="+status).success(function(data){
+      $http.post("Item.php?itemID="+item+"&status="+status).success(function(data){
         getItem();
       });
   };

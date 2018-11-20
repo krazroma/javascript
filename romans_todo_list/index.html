@@ -43,6 +43,7 @@
       			</div>
       		</div>
     	   </header>
+
       	 <fieldset class="items-list">
       		  <label class="items-list-item" ng-repeat="item in items">
         			<input type="checkbox" value="{{item.STATUS}}" ng-checked="item.STATUS==2" ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)"	class="items-list-cb"/>
@@ -52,7 +53,7 @@
 
 
 
-              <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+              <!-- <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
           <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
             save
           </button>
@@ -62,9 +63,23 @@
         </form>
         <div class="buttons" ng-show="!rowform.$visible">
           <button type="button" class="btn btn-primary" ng-click="rowform.$show()">edit</button>
-        </div>
+        </div> -->
+
+        <script type="text/ng-template" id="display">
+                <td>{{item.Item}}</td>
+                <td>
+                    <button ng-click="editContact(item)">Edit</button>
+                </td>
+            </script>
 
 
+            <script type="text/ng-template" id="edit">
+                <td><input type="text" ng-model="model.selected.item" /></td>
+                <td>
+                    <button ng-click="saveContact($index)">Save</button>
+                    <button ng-click="reset()">Cancel</button>
+                </td>
+            </script>
 
 
               <a ng-click="updateEditedItem(item.ID)" class="pull-right blue"><i class="fa fa-edit"></i></a>
