@@ -48,7 +48,7 @@
         			<span class="items-list-mark"></span>
         			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
         			<a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="far fa-edit"></i></a>
-              <a ng-click="" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
+              <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
       		  </label>
       	 </fieldset>
         </section>
