@@ -1,7 +1,7 @@
 //Define an angular module for our app
-var app = angular.module('shopApp', []);
+var app = angular.module('todoApp', []);
 
-app.controller('shopController', function($scope, $http) {
+app.controller('todoController', function($scope, $http) {
 
   getItem(); // Load all available items
   function getItem(){
