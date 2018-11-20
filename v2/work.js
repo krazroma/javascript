@@ -1,4 +1,4 @@
-var app = angular.module("app", ["xeditable", "ngMockE2E"]);
+var app = angular.module("app", []);
 
 
 
