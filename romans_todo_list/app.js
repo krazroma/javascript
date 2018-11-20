@@ -17,6 +17,16 @@ app.controller('shopController', function($scope, $http) {
       });
   };
 
+//////////////////////////////////////////////////////////////////////
+  $scope.updateEditedItem = function(item, status, task) {
+    if(status=='2'){status='0';}else{status='2';}
+      $http.post("updateEditedItem.php?itemID="+item+"&status="+status).success(function(data){
+        getItem();
+      });
+  };
+//////////////////////////////////////////////////////////////////////
+
+
   $scope.deleteItem = function (item) {
     if(confirm("Are you sure to delete this item?")){
     $http.post("deleteItem.php?itemID="+item).success(function(data){
