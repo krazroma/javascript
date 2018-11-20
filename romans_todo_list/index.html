@@ -49,6 +49,9 @@
         			<span class="items-list-mark"></span>
         			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
               <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
+
+
+
               <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
           <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
             save
@@ -60,7 +63,11 @@
         <div class="buttons" ng-show="!rowform.$visible">
           <button type="button" class="btn btn-primary" ng-click="rowform.$show()">edit</button>
         </div>
-              <a ng-click="deleteItem(item.ID)" class="pull-right blue"><i class="fa fa-edit"></i></a>
+
+
+
+
+              <a ng-click="updateEditedItem(item.ID)" class="pull-right blue"><i class="fa fa-edit"></i></a>
       		  </label>
       	 </fieldset>
         </section>

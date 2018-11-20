@@ -18,9 +18,8 @@ app.controller('shopController', function($scope, $http) {
   };
 
 //////////////////////////////////////////////////////////////////////
-  $scope.updateEditedItem = function(item, status, task) {
-    if(status=='2'){status='0';}else{status='2';}
-      $http.post("updateEditedItem.php?itemID="+item+"&status="+status).success(function(data){
+  $scope.updateEditedItem = function(item) {
+      $http.post("updateEditedItem.php?itemID="+item).success(function(data){
         getItem();
       });
   };
