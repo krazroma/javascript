@@ -1019,7 +1019,7 @@ angular.mock.dump = function(object) {
  * </div>
  *
  * During unit testing, we want our unit tests to run quickly and have no external dependencies so
- * we don’t want to send [XHR](https://developer.mozilla.org/en/xmlhttprequest) or
+ * we donï¿½t want to send [XHR](https://developer.mozilla.org/en/xmlhttprequest) or
  * [JSONP](http://en.wikipedia.org/wiki/JSONP) requests to a real server. All we really need is
  * to verify whether a certain request has been sent or not, or alternatively just let the
  * application make requests, respond with pre-trained responses and assert that the end result is
@@ -1195,7 +1195,7 @@ angular.mock.dump = function(object) {
          var controller = createController();
          $httpBackend.flush();
 
-         // now you don’t care about the authentication, but
+         // now you donï¿½t care about the authentication, but
          // the controller will still send the request and
          // $httpBackend will respond without you having to
          // specify the expectation and response for this request
@@ -1437,12 +1437,12 @@ function createHttpBackendMock($rootScope, $timeout, $delegate, $browser) {
    *   request is handled. You can save this object for later use and invoke `respond` again in
    *   order to change how a matched request is handled.
    *
-   *  - respond –
+   *  - respond ï¿½
    *      ```js
    *      {function([status,] data[, headers, statusText])
    *      | function(function(method, url, data, headers, params)}
    *      ```
-   *    – The respond method takes a set of static data to be returned or a function that can
+   *    ï¿½ The respond method takes a set of static data to be returned or a function that can
    *    return an array containing response status (number), response data (Array|Object|string),
    *    response headers (Object), and the text for the status (string). The respond method returns
    *    the `requestHandler` object for possible overrides.
@@ -1629,12 +1629,12 @@ function createHttpBackendMock($rootScope, $timeout, $delegate, $browser) {
    *  request is handled. You can save this object for later use and invoke `respond` again in
    *  order to change how a matched request is handled.
    *
-   *  - respond –
+   *  - respond ï¿½
    *    ```
    *    { function([status,] data[, headers, statusText])
    *    | function(function(method, url, data, headers, params)}
    *    ```
-   *    – The respond method takes a set of static data to be returned or a function that can
+   *    ï¿½ The respond method takes a set of static data to be returned or a function that can
    *    return an array containing response status (number), response data (Array|Object|string),
    *    response headers (Object), and the text for the status (string). The respond method returns
    *    the `requestHandler` object for possible overrides.
@@ -2476,15 +2476,15 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *   control how a matched request is handled. You can save this object for later use and invoke
  *   `respond` or `passThrough` again in order to change how a matched request is handled.
  *
- *  - respond –
+ *  - respond ï¿½
  *    ```
  *    { function([status,] data[, headers, statusText])
  *    | function(function(method, url, data, headers, params)}
  *    ```
- *    – The respond method takes a set of static data to be returned or a function that can return
+ *    ï¿½ The respond method takes a set of static data to be returned or a function that can return
  *    an array containing response status (number), response data (Array|Object|string), response
  *    headers (Object), and the text for the status (string).
- *  - passThrough – `{function()}` – Any request matching a backend definition with
+ *  - passThrough ï¿½ `{function()}` ï¿½ Any request matching a backend definition with
  *    `passThrough` handler will be passed through to the real backend (an XHR request will be made
  *    to the server.)
  *  - Both methods return the `requestHandler` object for possible overrides.

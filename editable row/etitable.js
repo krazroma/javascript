@@ -9,14 +9,14 @@ app.controller('Ctrl', function($scope, $filter, $http) {
     {id: 1, name: 'awesome user1', status: 2, group: 4, groupName: 'admin'},
     {id: 2, name: 'awesome user2', status: undefined, group: 3, groupName: 'vip'},
     {id: 3, name: 'awesome user3', status: 2, group: null}
-  ]; 
+  ];
 
   $scope.statuses = [
     {value: 1, text: 'status1'},
     {value: 2, text: 'status2'},
     {value: 3, text: 'status3'},
     {value: 4, text: 'status4'}
-  ]; 
+  ];
 
   $scope.groups = [];
   $scope.loadGroups = function() {
@@ -65,7 +65,7 @@ app.controller('Ctrl', function($scope, $filter, $http) {
       id: $scope.users.length+1,
       name: '',
       status: null,
-      group: null 
+      group: null
     };
     $scope.users.push($scope.inserted);
   };
@@ -79,7 +79,7 @@ app.run(function($httpBackend) {
     {id: 3, text: 'vip'},
     {id: 4, text: 'admin'}
   ]);
-    
+
   $httpBackend.whenPOST(/\/saveUser/).respond(function(method, url, data) {
     data = angular.fromJson(data);
     return [200, {status: 'ok'}];
