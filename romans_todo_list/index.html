@@ -1,4 +1,4 @@
-<html ng-app="shopApp">
+<html ng-app="todoApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,7 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <title>Todo List</title>
   </head>
-  <body ng-controller="shopController">
+  <body ng-controller="todoController">
     <div class="navbar navbar-default" id="navbar">
       <div class="container" id="navbar-container">
   	   <div class="navbar-header navbar-brand">Simple Todo List</div><!-- /.navbar-header -->
@@ -29,12 +29,12 @@
         	<header class="items-header">
     		    <div class="row">
 	            <div class="col-sm-9 col-xs-12">
-        				<form class="form-inline" name="shopList">
+        				<form class="form-inline" name="todoList">
 				         <div class="form-actions">
 		              <div class="input-group">
     							<input type="text" class="form-control" ng-model="itemInput" placeholder="Add New Item" autofocus required />
       							<div class="input-group-btn">
-						          <button class="btn btn-info" type="submit" ng-click="addItem(itemInput); itemInput = null" ng-disabled="shopList.$invalid">
+						          <button class="btn btn-info" type="submit" ng-click="addItem(itemInput); itemInput = null" ng-disabled="todoList.$invalid">
       									<i class="fa fa-plus"></i>&nbsp;Add Item
       								</button>
       							</div>
