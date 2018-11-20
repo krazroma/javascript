@@ -21,6 +21,7 @@ app.controller('shopController', function($scope, $http) {
   $scope.updateEditedItem = function(item) {
       $http.post("updateEditedItem.php?itemID="+item).success(function(data){
         getItem();
+        $scope.itemInput = "";
       });
   };
 //////////////////////////////////////////////////////////////////////
