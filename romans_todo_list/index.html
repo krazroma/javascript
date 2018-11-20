@@ -49,20 +49,18 @@
         			<span class="items-list-mark"></span>
         			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
               <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
-              <div class="buttons">
-                <!-- button to show form -->
-                <button type="button" class="btn btn-default" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
-                  Edit
-                </button>
-                <!-- buttons to submit / cancel form -->
-                <span ng-show="editableForm.$visible">
-                  <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
-                    Save
-                  </button>
-                  <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
-                    Cancel
-                  </button>
-                  </div>
+              <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+            save
+          </button>
+          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+            cancel
+          </button>
+        </form>
+        <div class="buttons" ng-show="!rowform.$visible">
+          <button type="button" class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+          <button type="button" class="btn btn-danger" ng-click="removeUser($index)">del</button>
+        </div>  
               <a ng-click="deleteItem(item.ID)" class="pull-right blue"><i class="fa fa-edit"></i></a>
       		  </label>
       	 </fieldset>
