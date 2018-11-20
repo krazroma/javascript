@@ -65,7 +65,7 @@
           <button type="button" class="btn btn-primary" ng-click="rowform.$show()">edit</button>
         </div> -->
 
-        <script type="text/ng-template" id="display">
+        <!-- <script type="text/ng-template" id="display">
                 <h1>{{item.Item}}</h1>
                     <button ng-click="editContact(item)">Edit</button>
 
@@ -78,9 +78,36 @@
                     <button ng-click="saveContact($index)">Save</button>
                     <button ng-click="reset()">Cancel</button>
 
-            </script>
+            </script> -->
+
+            <div ng-app="demo" ng-controller="Ctrl">
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in model.contacts" ng-include="getTemplate(contact)">
+                        </tr>
+                    </tbody>
+                </table>
+
+                <script type="text/ng-template" id="display">
+                    <td>{{contact.name}}</td>
+                    <td>
+                        <button ng-click="editContact(contact)">Edit</button>
+                    </td>
+                </script>
 
 
+                <script type="text/ng-template" id="edit">
+                    <td><input type="text" ng-model="model.selected.name" /></td>
+                    <td>
+                        <button ng-click="saveContact($index)">Save</button>
+                        <button ng-click="reset()">Cancel</button>
+                    </td>
+                </script>
+            </div>
               <!-- <a ng-click="updateEditedItem(item.ID)" class="pull-right blue"><i class="fa fa-edit"></i></a> -->
       		  </label>
       	 </fieldset>
