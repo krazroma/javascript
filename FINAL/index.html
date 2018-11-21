@@ -65,8 +65,7 @@
             <span class="items-list-desc" ng-class="{strike:item.STATUS==2}"></span>
               <form name="item_edit" novalidate ng-submit="submit(item)">
                <span class="item-view">
-
-                 <Span ng-show="!edit">{{item.ITEM}}</span>
+                 <span ng-show="!edit">{{item.ITEM}}</span>
                   <button class="btn btn-success btn-xs" ng-click="edit = true">Edit</button>
                  <input ng-show="edit == true" ng-model="item.ITEM" >
                 </span>
