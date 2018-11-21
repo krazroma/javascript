@@ -67,14 +67,14 @@
 
               <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span>
             </span>
-            
+
             <!-- begin edit -->
                         <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">
 
                           <form name="item_edit" novalidate ng-submit="submit(item)">
                              <span class="item-view">
                                <br/>
-                             <button class="btn btn-primary" ng-click="edit = true" class="pull-right red">Edit</button>
+                             <button class="btn btn-primary" ng-click="edit = true">Edit</button>
                              <span ng-show="!edit">{{item.ITEM}}</span>
                              <input ng-show="edit == true" ng-model="item.ITEM" >
                            </span>
