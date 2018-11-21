@@ -67,9 +67,9 @@
                <span class="item-view">
 
                  <Sspan ng-show="!edit">{{item.ITEM}}</span>
-                  <button class="btn btn-success btn-sm" ng-click="edit = true">Edit</button>
+                  <button class="btn btn-success btn-xs" ng-click="edit = true">Edit</button>
                  <input ng-show="edit == true" ng-model="item.ITEM" >
-               </span>
+                </span>
                 <button ng-show="edit == true" type="submit" ng-click="edit = false; changeItemName(item.ID,item.STATUS,item.ITEM)" >Submit</button>
               </form>
             <!-- end edit -->
