@@ -60,8 +60,6 @@
       			ng-checked="item.STATUS==2"
       			ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)"
       			class="items-list-cb"/>
-      			<span class="items-list-mark"></span>
-            <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span>
 
             <!-- begin edit -->
             <span class="items-list-desc" ng-class="{strike:item.STATUS==2}"></span>
@@ -74,6 +72,10 @@
                 <button ng-show="edit == true" type="submit" ng-click="edit = false; changeItemName(item.ID,item.STATUS,item.ITEM)" >Submit</button>
               </form>
             <!-- end edit -->
+      			<span class="items-list-mark"></span>
+            <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span>
+
+
 
             <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
             <br/>
