@@ -17,69 +17,6 @@ app.controller('shopController', function($scope, $http) {
       });
   };
 
-//////////////////////////////////////////////////////////////////////
-  // $scope.EditedItem = function(item) {
-  //     $http.post("EditedItem.php?itemID="+item).success(function(data){
-  //       getItem();
-  //       $scope.itemInput = "";
-  //     });
-  // };
-
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-
-
-  // $scope.getTemplate = function (item) {
-  //         if (item.id === $scope.model.selected.id) return 'edit';
-  //         else return 'display';
-  //     };
-  //
-  //     $scope.editContact = function (item) {
-  //         $scope.model.selected = angular.copy(item);
-  //     };
-  //
-  //     $scope.saveContact = function (idx) {
-  //         console.log("Saving contact");
-  //         $scope.model.contacts[idx] = angular.copy($scope.model.selected);
-  //         $scope.reset();
-  //     };
-  //
-  //     $scope.reset = function () {
-  //         $scope.model.selected = {};
-  //     };
-
-      // $scope.model = {
-      //     contacts: [{
-      //         id: 1,
-      //         name: "Ben"
-      //     }],
-      //     selected: {}
-      // };
-      //
-      // // gets the template to ng-include for a table row / item
-      // $scope.getTemplate = function (contact) {
-      //     if (contact.id === $scope.model.selected.id) return 'edit';
-      //     else return 'display';
-      // };
-      //
-      // $scope.editContact = function (contact) {
-      //     $scope.model.selected = angular.copy(contact);
-      // };
-      //
-      // $scope.saveContact = function (idx) {
-      //     console.log("Saving contact");
-      //     $scope.model.contacts[idx] = angular.copy($scope.model.selected);
-      //     $scope.reset();
-      // };
-      //
-      // $scope.reset = function () {
-      //     $scope.model.selected = {};
-      // };
-
-
-
-//////////////////////////////////////////////////////////////////////
-
 
   $scope.deleteItem = function (item) {
     if(confirm("Are you sure to delete this item?")){
