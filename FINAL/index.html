@@ -70,21 +70,23 @@
 
             <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
 
-            <!-- begin edit -->
-                        <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">
 
-                          <form name="item_edit" novalidate ng-submit="submit(item)">
-                             <span class="item-view">
-                               <br/>
-                             <button class="btn btn-primary" ng-click="edit = true" class="pull-right red">Edit</button>
-                             <span ng-show="!edit">{{item.ITEM}}</span>
-                             <input ng-show="edit == true" ng-model="item.ITEM" >
-                           </span>
-                            <button ng-show="edit == true" type="submit" ng-click="edit = false ; changeItemName(item.ID,item.STATUS,item.ITEM)" >Submit</button>
-                          </form>
-            <!-- end edit -->
       		</label>
       	</fieldset>
+
+        <!-- begin edit -->
+                    <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">
+
+                      <form name="item_edit" novalidate ng-submit="submit(item)">
+                         <span class="item-view">
+                           <br/>
+                         <button class="btn btn-primary" ng-click="edit = true" class="pull-right red">Edit</button>
+                         <span ng-show="!edit">{{item.ITEM}}</span>
+                         <input ng-show="edit == true" ng-model="item.ITEM" >
+                       </span>
+                        <button ng-show="edit == true" type="submit" ng-click="edit = false ; changeItemName(item.ID,item.STATUS,item.ITEM)" >Submit</button>
+                      </form>
+        <!-- end edit -->
 
       </section>
 
